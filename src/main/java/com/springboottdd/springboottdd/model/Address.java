@@ -1,5 +1,6 @@
 package com.springboottdd.springboottdd.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,8 +25,10 @@ public class Address {
     private String neighborhood;
     private String city;
     private String state;
+
+
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "person_id")
     private Person person;
 
 }

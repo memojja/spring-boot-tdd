@@ -1,5 +1,6 @@
 package com.springboottdd.springboottdd.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,7 +10,6 @@ import java.util.List;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 
 @Entity
 public class Person {
@@ -19,8 +19,10 @@ public class Person {
     private Long id;
     private String name;
     private String tc;
-    @OneToMany
+
+    @OneToMany(mappedBy ="person",cascade = CascadeType.REMOVE)
     private List<Address> addresses;
-    @OneToMany
+
+    @OneToMany(mappedBy ="person",cascade = CascadeType.REMOVE)
     private List<Telephone> telephones;
 }

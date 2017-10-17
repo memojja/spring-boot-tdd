@@ -1,5 +1,6 @@
 package com.springboottdd.springboottdd.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,8 +21,9 @@ public class Telephone {
 //    private String ddd;
     private String number;
 
+
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "person_id")
     private Person person;
 
 
