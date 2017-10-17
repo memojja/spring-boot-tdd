@@ -5,14 +5,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+
+@Entity
 public class Address {
 
     @Id
@@ -24,5 +24,8 @@ public class Address {
     private String neighborhood;
     private String city;
     private String state;
+    @ManyToOne
+    @JoinColumn
+    private Person person;
 
 }

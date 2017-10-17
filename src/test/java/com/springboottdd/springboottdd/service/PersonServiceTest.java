@@ -1,5 +1,6 @@
 package com.springboottdd.springboottdd.service;
 
+import com.springboottdd.springboottdd.model.Address;
 import com.springboottdd.springboottdd.model.Person;
 import com.springboottdd.springboottdd.model.Telephone;
 import com.springboottdd.springboottdd.repository.PersonRepository;
@@ -16,6 +17,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.swing.text.html.Option;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
 
@@ -93,4 +95,5 @@ public class PersonServiceTest {
     public void must_be_return_telephone_not_found() throws Exception {
         personService.callByTelephone(telephone);
     }
+
 }

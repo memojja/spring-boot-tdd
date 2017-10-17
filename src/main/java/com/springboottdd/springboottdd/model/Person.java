@@ -1,19 +1,17 @@
 package com.springboottdd.springboottdd.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
+
+@Entity
 public class Person {
 
     @Id
@@ -21,6 +19,8 @@ public class Person {
     private Long id;
     private String name;
     private String tc;
+    @OneToMany
     private List<Address> addresses;
+    @OneToMany
     private List<Telephone> telephones;
 }
