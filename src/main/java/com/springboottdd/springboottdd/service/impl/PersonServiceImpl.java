@@ -8,9 +8,12 @@ import com.springboottdd.springboottdd.service.exception.SameTcException;
 import com.springboottdd.springboottdd.service.exception.SamteTelephoneException;
 import com.springboottdd.springboottdd.service.exception.TelephoneNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+
+@Service
 public class PersonServiceImpl implements PersonService {
 
 

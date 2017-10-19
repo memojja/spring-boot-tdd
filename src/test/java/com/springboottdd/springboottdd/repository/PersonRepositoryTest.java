@@ -42,7 +42,8 @@ public class PersonRepositoryTest {
         entityManager.flush();
 
 //        //when
-        Person testedPerson = entityManager.find(Person.class,1L);
+//        Person testedPerson = entityManager.find(Person.class,1L);
+        Person testedPerson = personRepository.findOne(1L);
 
         //then
         assertThat(testedPerson.getTc()).isEqualTo(person.getTc());
